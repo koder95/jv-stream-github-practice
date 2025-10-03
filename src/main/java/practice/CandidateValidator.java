@@ -1,8 +1,7 @@
 package practice;
 
-import model.Candidate;
-
 import java.util.function.Predicate;
+import model.Candidate;
 
 /**
  * The requirements are: person should be older than 35 years, should be allowed to vote,
