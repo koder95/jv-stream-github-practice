@@ -14,10 +14,11 @@ public class CandidateValidator implements Predicate<Candidate> {
 
     private static final int AGE_REQUIREMENT = 35;
     private static final int LIVING_IN_UKR_REQUIREMENT = 10;
+    private static final String REQUIRED_NATIONALITY = "Ukrainian";
 
     @Override
     public boolean test(Candidate candidate) {
-        boolean isUkrainian = candidate.getNationality().equals("Ukrainian");
+        boolean isUkrainian = REQUIRED_NATIONALITY.equals(candidate.getNationality());
         boolean isOlderThan35 = candidate.getAge() >= AGE_REQUIREMENT;
         boolean allowedToVote = candidate.isAllowedToVote();
         String[] split = candidate.getPeriodsInUkr().split("-");
